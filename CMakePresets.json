@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "vcpkg-default",
+      "hidden": true,
+      "generator": "Ninja",
+      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      }
+    },
+    {
+      "name": "debug",
+      "inherits": "vcpkg-default",
+      "generator": "Ninja",
+      "displayName": "Debug with vcpkg",
+      "description": "vcpkg debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      },
+      "binaryDir": "${sourceDir}/vcpkg-build-debug"
+    },
+    {
+      "name": "release",
+      "inherits": "vcpkg-default",
+      "generator": "Ninja",
+      "displayName": "Release with vcpkg",
+      "description": "vcpkg release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "binaryDir": "${sourceDir}/vcpkg-build-release"
+    }
+  ]
+}

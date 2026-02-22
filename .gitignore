@@ -1,0 +1,8 @@
+cmake-build-debug
+.idea
+cus-build
+build
+vcpkg-build-debug
+vcpkg-build-release
+target
+out
