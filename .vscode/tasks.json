@@ -4,13 +4,13 @@
     {
       "label": "MinGW Debug Cmake",
       "type": "shell",
-      "command": "cmake --preset debug && cmake --build mingw-x64-vcpkg-build-debug",
+      "command": "cmake --preset mingw-x64-debug && cmake --build mingw-x64-vcpkg-build-debug",
       "group": "build"
     },
     {
       "label": "MinGW Release Cmake",
       "type": "shell",
-      "command": "cmake --preset release && cmake --build mingw-x64-vcpkg-build-release",
+      "command": "cmake --preset mingw-x64-release && cmake --build mingw-x64-vcpkg-build-release",
       "group": "build"
     }
   ]

@@ -15,7 +15,7 @@
       }
     },
     {
-      "name": "debug",
+      "name": "mingw-x64-debug",
       "inherits": "mingw-x64-vcpkg",
       "generator": "Ninja",
       "displayName": "Debug with MinGW x64 vcpkg",
@@ -26,7 +26,7 @@
       "binaryDir": "${sourceDir}/mingw-x64-vcpkg-build-debug"
     },
     {
-      "name": "release",
+      "name": "mingw-x64-release",
       "inherits": "mingw-x64-vcpkg",
       "generator": "Ninja",
       "displayName": "Release with MinGW x64 vcpkg",
