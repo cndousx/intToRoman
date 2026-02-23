@@ -4,6 +4,9 @@
     {
       "label": "MinGW Debug Cmake",
       "type": "shell",
+      // command 说明
+      // mingw-x64-debug 是 CMakePresets.json 中定义的name(预设名称);
+      // mingw-x64-vcpkg-build-debug是CMakePresets.json中定义的binaryDir
       "command": "cmake --preset mingw-x64-debug && cmake --build mingw-x64-vcpkg-build-debug",
       "group": "build"
     },
