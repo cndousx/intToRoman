@@ -2,15 +2,15 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Debug Cmake",
+      "label": "MinGW Debug Cmake",
       "type": "shell",
-      "command": "cmake --preset debug && cmake --build vcpkg-build-debug",
+      "command": "cmake --preset debug && cmake --build mingw-x64-vcpkg-build-debug",
       "group": "build"
     },
     {
-      "label": "Release Cmake",
+      "label": "MinGW Release Cmake",
       "type": "shell",
-      "command": "cmake --preset release && cmake --build vcpkg-build-release",
+      "command": "cmake --preset release && cmake --build mingw-x64-vcpkg-build-release",
       "group": "build"
     }
   ]

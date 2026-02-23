@@ -2,7 +2,8 @@ cmake-build-debug
 .idea
 cus-build
 build
-vcpkg-build-debug
-vcpkg-build-release
+mingw-x64-vcpkg-build-debug
+mingw-x64-vcpkg-build-release
 target
 out
+*build*

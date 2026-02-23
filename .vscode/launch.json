@@ -1,12 +1,11 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
-      "name": "Debug",
+      "name": "MinGW Debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/vcpkg-build-debug/intToRoman",
+      "program": "${workspaceFolder}/mingw-x64-vcpkg-build-debug/intToRoman",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -21,13 +20,13 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "Debug Cmake" // tasks.json中指定的任务
+      "preLaunchTask": "MinGW Debug Cmake" // tasks.json中指定的任务
     },
     {
-      "name": "Release",
+      "name": "MinGW Release",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/vcpkg-build-release/intToRoman",
+      "program": "${workspaceFolder}/mingw-x64-vcpkg-build-release/intToRoman",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -42,7 +41,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "Release Cmake" // tasks.json中指定的任务
+      "preLaunchTask": "MinGW Release Cmake" // tasks.json中指定的任务
     }
   ]
 }
