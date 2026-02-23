@@ -1,6 +1,7 @@
-#include <gtest/gtest.h>
 #include "../include/solution.h"
+#include <gtest/gtest.h>
 #include <iostream>
+
 using namespace std;
 
 TEST(SolutionTest, IntToRomanTest) {

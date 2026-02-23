@@ -1,0 +1,2 @@
+BasedOnStyle: LLVM  # 基于LLVM风格
+IndentWidth: 4      # 将缩进改为4个空格
