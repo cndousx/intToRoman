@@ -35,6 +35,41 @@
         "CMAKE_BUILD_TYPE": "Release"
       },
       "binaryDir": "${sourceDir}/mingw-x64-vcpkg-build-release"
+    },
+    {
+      "name": "wsl-x64-vcpkg",
+      "hidden": true,
+      "generator": "Ninja",
+      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-linux"
+      }
+    },
+    {
+      "name": "wsl-x64-debug",
+      "inherits": "wsl-x64-vcpkg",
+      "generator": "Ninja",
+      "displayName": "Debug with WSL x64",
+      "description": "debug build with WSL x64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      },
+      "binaryDir": "${sourceDir}/wsl-x64-build-debug"
+    },
+    {
+      "name": "wsl-x64-release",
+      "inherits": "wsl-x64-vcpkg",
+      "generator": "Ninja",
+      "displayName": "Release with WSL x64",
+      "description": "release build with WSL x64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "binaryDir": "${sourceDir}/wsl-x64-build-release"
     }
   ]
 }

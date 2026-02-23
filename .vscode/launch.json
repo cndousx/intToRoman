@@ -42,6 +42,47 @@
         }
       ],
       "preLaunchTask": "MinGW Release Cmake" // tasks.json中指定的任务
+    },
+    {
+      "name": "WSL Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/wsl-x64-build-debug/intToRoman",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "WSL Debug Cmake"
+    },
+    {
+      "name": "WSL Release",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/wsl-x64-build-release/intToRoman",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing"
+        }
+      ],
+      "preLaunchTask": "WSL Release Cmake"
     }
   ]
 }
