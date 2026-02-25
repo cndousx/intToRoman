@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// NOLINTNEXTLINE(readability-convert-member-functions-to-static)
 string Solution::intToRoman(int num) {
     vector<pair<int, string>> romanMap = {
         {1000, "M"}, {900, "CM"}, {500, "D"}, {400, "CD"}, {100, "C"},
