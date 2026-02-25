@@ -6,7 +6,7 @@ using namespace std;
 
 TEST(SolutionTest, IntToRomanTest) {
     cout << "start test 整数转罗马数字" << endl;
-    Solution solution = Solution();
+    auto solution = Solution();
     EXPECT_EQ(solution.intToRoman(3), "III");
     EXPECT_EQ(solution.intToRoman(4), "IV");
     EXPECT_EQ(solution.intToRoman(9), "IX");
