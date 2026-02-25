@@ -2,74 +2,62 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "mingw-x64-vcpkg",
+      "name": "x64-vcpkg",
       "hidden": true,
       "generator": "Ninja",
       "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
       "architecture": {
         "value": "x64",
         "strategy": "external"
-      },
-      "cacheVariables": {
-        "VCPKG_TARGET_TRIPLET": "x64-mingw-static"
       }
     },
     {
       "name": "mingw-x64-debug",
-      "inherits": "mingw-x64-vcpkg",
+      "inherits": "x64-vcpkg",
       "generator": "Ninja",
-      "displayName": "Debug with MinGW x64 vcpkg",
-      "description": "debug build with MinGW x64 vcpkg",
+      "displayName": "Debug with vcpkg(x64-mingw)",
+      "description": "vcpkg debug x64-mingw",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Debug",
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-static"
       },
-      "binaryDir": "${sourceDir}/mingw-x64-vcpkg-build-debug"
+      "binaryDir": "${sourceDir}/mingw-x64-build-debug"
     },
     {
       "name": "mingw-x64-release",
-      "inherits": "mingw-x64-vcpkg",
+      "inherits": "x64-vcpkg",
       "generator": "Ninja",
-      "displayName": "Release with MinGW x64 vcpkg",
-      "description": "release build with MinGW x64 vcpkg",
+      "displayName": "Release with vcpkg(x64-mingw)",
+      "description": "vcpkg release x64-mingw",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_BUILD_TYPE": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-static-release"
       },
-      "binaryDir": "${sourceDir}/mingw-x64-vcpkg-build-release"
+      "binaryDir": "${sourceDir}/mingw-x64-build-release"
     },
     {
-      "name": "wsl-x64-vcpkg",
-      "hidden": true,
+      "name": "linux-x64-debug",
+      "inherits": "x64-vcpkg",
       "generator": "Ninja",
-      "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-      "architecture": {
-        "value": "x64",
-        "strategy": "external"
-      },
+      "displayName": "Debug with linux x64",
+      "description": "debug build with linux x64",
       "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-linux"
-      }
+      },
+      "binaryDir": "${sourceDir}/linux-x64-build-debug"
     },
     {
-      "name": "wsl-x64-debug",
-      "inherits": "wsl-x64-vcpkg",
+      "name": "linux-x64-release",
+      "inherits": "x64-vcpkg",
       "generator": "Ninja",
-      "displayName": "Debug with WSL x64",
-      "description": "debug build with WSL x64",
+      "displayName": "Release with linux x64",
+      "description": "release build with linux x64",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-linux-release"
       },
-      "binaryDir": "${sourceDir}/wsl-x64-build-debug"
-    },
-    {
-      "name": "wsl-x64-release",
-      "inherits": "wsl-x64-vcpkg",
-      "generator": "Ninja",
-      "displayName": "Release with WSL x64",
-      "description": "release build with WSL x64",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release"
-      },
-      "binaryDir": "${sourceDir}/wsl-x64-build-release"
+      "binaryDir": "${sourceDir}/linux-x64-build-release"
     }
   ]
 }

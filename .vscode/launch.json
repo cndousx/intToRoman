@@ -5,7 +5,7 @@
       "name": "MinGW Debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/mingw-x64-vcpkg-build-debug/intToRoman",
+      "program": "${workspaceFolder}/mingw-x64-build-debug/intToRoman",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -26,7 +26,7 @@
       "name": "MinGW Release",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/mingw-x64-vcpkg-build-release/intToRoman",
+      "program": "${workspaceFolder}/mingw-x64-build-release/intToRoman",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -44,10 +44,10 @@
       "preLaunchTask": "MinGW Release Cmake" // tasks.json中指定的任务
     },
     {
-      "name": "WSL Debug",
+      "name": "Linux Debug",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/wsl-x64-build-debug/intToRoman",
+      "program": "${workspaceFolder}/linux-x64-build-debug/intToRoman",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -62,13 +62,13 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "WSL Debug Cmake"
+      "preLaunchTask": "Linux Debug Cmake"
     },
     {
-      "name": "WSL Release",
+      "name": "Linux Release",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/wsl-x64-build-release/intToRoman",
+      "program": "${workspaceFolder}/linux-x64-build-release/intToRoman",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
@@ -82,7 +82,7 @@
           "text": "-enable-pretty-printing"
         }
       ],
-      "preLaunchTask": "WSL Release Cmake"
+      "preLaunchTask": "Linux Release Cmake"
     }
   ]
 }

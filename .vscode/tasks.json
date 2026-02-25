@@ -6,29 +6,26 @@
       "type": "shell",
       // command 说明
       // mingw-x64-debug 是 CMakePresets.json 中定义的name(预设名称);
-      // mingw-x64-vcpkg-build-debug是CMakePresets.json中定义的binaryDir
-      "command": "cmake --preset mingw-x64-debug && cmake --build mingw-x64-vcpkg-build-debug",
+      // mingw-x64-build-debug是CMakePresets.json中定义的binaryDir
+      "command": "cmake --preset mingw-x64-debug && cmake --build mingw-x64-build-debug",
       "group": "build"
     },
     {
       "label": "MinGW Release Cmake",
       "type": "shell",
-      "command": "cmake --preset mingw-x64-release && cmake --build mingw-x64-vcpkg-build-release",
+      "command": "cmake --preset mingw-x64-release && cmake --build mingw-x64-build-release",
       "group": "build"
     },
     {
-      "label": "WSL Debug Cmake",
+      "label": "Linux Debug Cmake",
       "type": "shell",
-      // command 说明
-      // mingw-x64-debug 是 CMakePresets.json 中定义的name(预设名称);
-      // mingw-x64-vcpkg-build-debug是CMakePresets.json中定义的binaryDir
-      "command": "cmake --preset wsl-x64-debug && cmake --build wsl-x64-build-debug",
+      "command": "cmake --preset linux-x64-debug && cmake --build linux-x64-build-debug",
       "group": "build"
     },
     {
-      "label": "WSL Release Cmake",
+      "label": "Linux Release Cmake",
       "type": "shell",
-      "command": "cmake --preset wsl-x64-release && cmake --build wsl-x64-build-release",
+      "command": "cmake --preset linux-x64-release && cmake --build linux-x64-build-release",
       "group": "build"
     }
   ]
